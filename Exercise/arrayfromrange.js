@@ -5,4 +5,3 @@ function range(min,max){
     }
 }
 console.log(range(1,9));
-//comment
