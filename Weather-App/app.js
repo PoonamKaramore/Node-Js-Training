@@ -66,11 +66,43 @@ const request = require('postman-request')
 
 // geocode using callback function
 const geocode=require('./utils/geocode')
-geocode('Boston',(error,data)=>{
-    console.log('Error ',error)
-    console.log('Data ',data)
-})
+// geocode('Boston',(error,data)=>{
+//     console.log('Error ',error)
+//     console.log('Data ',data)
+// })
 
 // challenge : create a reusable function for getting the forecast
 //setup forecast function in utils/forecast.js
 //Thw forecast function should have 3 callbacks : low level error , coordinate level error,success
+
+const forecast = require('./utils/forecast')
+// forecast(37.8267,-122.4233,(error,data)=>{
+//     console.log('Error ',error)
+//     console.log('Data ',data)
+// })
+
+//working together with geocode and forecast
+// geocode('Boston',(error,data)=>{
+//     console.log('Error ',error)
+//     console.log('Data ',data)
+//     forecast(data.latitude,data.longitude,(error,data)=>{
+//         console.log('Error ',error)
+//         console.log('Data ',data)
+//     })
+
+// })
+
+const address = process.argv[2]
+geocode(address,(error,data)=>{
+    if(error){
+        return console.log('Error ',error)
+    }
+    forecast(data.latitude,data.longitude,(error,forecastdata)=>{
+        if(error){
+            return console.log('Error ',error)
+        }
+        console.log(data.location)
+        console.log(forecastdata)
+    })
+
+})
