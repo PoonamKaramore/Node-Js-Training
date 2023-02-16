@@ -1,25 +1,20 @@
-//1) Write a function that takes an array of numbers and returns a new array with only 
-//the even numbers from the original array.
+//1)Write a function that takes an array of numbers and 
+//returns the sum of all the numbers in the array.
 
-function evenArray(array1){
-    let result=[];
-    for(let i=0 ; i<array1.length ; i++){
-        if(array1[i]%2==0){
-            result.push(array1[i])
-        }
-        
+let sum=0
+function SumArray(array){
+    for(i=0; i<array.length; i++){
+        sum += array[i]
     }
-    return result;
+    console.log(sum)
 }
-
-const even = [1,2,3,4,5,6]
-console.log(evenArray(even))
+console.log(SumArray([1,2,3]))
 
 //2) Write a function that takes a string as input and returns the reverse of the string.
 function reverse(str){
     let revs="";
     for(let i=str.length-1 ; i>=0 ; i--){
-        revs=revs+str[i];
+        revs += str[i];
     }
     return revs;
 }
@@ -34,7 +29,8 @@ function largest(a,b){
         console.log(b +" is largest")
     }
 }
-console.log(largest(1,4))
+const largestNum = largest(2,6)
+console.log(largestNum)
 
 //4)Write a function that takes an array of strings and 
 //returns a new array with all the strings converted to uppercase.
@@ -49,15 +45,18 @@ function convert(array) {
   const myArray = ["apple","kiwi","banana"];
 console.log(convert(myArray));
 
-//5) Write a function that takes an array of numbers and 
-//returns a new array with only the even numbers from the original array.
+//5) Write a function that takes an array of numbers and returns a new array with only 
+//the even numbers from the original array.
 
-function sumArray(array){
-    let sum = 0;
-    for (let i = 0; i < array.length; i++) {  
-        if(array[i]%2==0){
-            console.log(sum += array[i]);   
-        } 
-    }  
+function evenNumArray(arr){
+    let result=[];
+    for(let i=0 ; i<arr.length ; i++){
+        if(arr[i]%2==0){
+            result.push(arr[i])
+        }
+        
+    }
+    return result;
 }
-sumArray([1, 4, 0, 9]); 
+const even = [1,2,3,4,5,6]
+console.log(evenNumArray(even))
