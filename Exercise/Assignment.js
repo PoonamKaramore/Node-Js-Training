@@ -11,15 +11,13 @@ function SumArray(array){
 console.log(SumArray([1,2,3]))
 
 //2) Write a function that takes a string as input and returns the reverse of the string.
-function reverse(str){
-    let revs="";
-    for(let i=str.length-1 ; i>=0 ; i--){
-        revs += str[i];
-    }
-    return revs;
+function revString(str){
+    let splitStr = str.split("")
+    let reverseStr = splitStr.reverse()
+    let output = reverseStr.join("")
+    return output
 }
-const input="task";
-console.log(reverse(input));
+console.log(revString("hello"))
 
 //3)Write a function that takes two numbers as input and returns the larger of the two numbers.
 function largest(a,b){
