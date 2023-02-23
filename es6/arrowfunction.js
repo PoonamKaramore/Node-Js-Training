@@ -2,7 +2,7 @@ let operations = (a, b) => {
 
     let sum = a + b;
     console.log('value of a and b is : '+ sum)
-
+    
     let substract = a-b;
     console.log('Value of a and b is : '+ substract)
     
