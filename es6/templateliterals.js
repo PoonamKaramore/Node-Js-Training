@@ -1,8 +1,14 @@
+//declaring variables
 let firstName = 'Poonam'
-let lastName = 'K'
-let fullName = `My name is ${firstName} ${lastName}`
-console.log(fullName)
+let lastName = 'Karamore' 
 
-console.log(`on 
-new
-line`)
+//interpolation
+let greet = `Hello ,My name is ${firstName} ${lastName}.`
+console.log(greet)
+
+//multiline string
+let multiLine = `Hello,
+How are you
+feeling today?`
+
+console.log(multiLine)
