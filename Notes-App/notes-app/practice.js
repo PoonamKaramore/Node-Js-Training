@@ -1,7 +1,8 @@
 
-//const fs = require('fs')
+const fs = require('fs')
+
 //challenge : use appendFileSync to append through file
-// fs.appendFileSync('notes.txt','adding a new line.')
+// fs.appendFileSync('notes.txt','hello my name is poonam.')
 
 // //importing data from a new file(utils.js)
 // const firstName = require('./utils')
@@ -31,15 +32,14 @@
 
 
 // //taking input from the user
-// const command = process.argv[2]
-// if(command === 'add'){
-//     console.log('adding notes')
-// }
-// else if(command === 'remove'){
-//     console.log('removing notes')
-// }
-// console.log(process.argv)
-
+const command = process.argv[2] 
+if(command === 'add'){
+    console.log('adding notes')
+}
+else if(command === 'remove'){
+    console.log('removing notes')
+}
+console.log(process.argv)
 // //yargs
 // const yargs = require('yargs')
 // console.log(yargs.argv)

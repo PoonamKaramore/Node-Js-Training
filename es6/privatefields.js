@@ -16,7 +16,7 @@ class Person{
 
     greet(){
         console.log(`Hello, ${this.#firstName}`)
-    }
+    } 
 }
 let newObj = new Person('Poonam');
 newObj.greet();
